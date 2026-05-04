@@ -225,6 +225,52 @@ img { display: block; max-width: 100%; }
 /* ── Section divider ── */
 .section-divider { border: none; border-top: 1px solid var(--gray-300); margin: 4rem 0; }
 
+/* ── Split hero ── */
+.hero-split {
+  border-bottom: 1px solid var(--gray-300);
+}
+.hero-split__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 6rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.hero-split__text {
+  min-width: 0;
+}
+.hero-split__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-split__image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 3px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-split__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 4rem 1.25rem 3rem;
+  }
+  .hero-split__image {
+    order: 1; /* image below text on mobile */
+  }
+  .hero-split__text {
+    order: 0;
+  }
+  .hero-split__image img {
+    max-width: 100%;
+  }
+}
+
 /* ── Nav cards (homepage) ── */
 .nav-cards {
   display: grid;

@@ -41,31 +41,39 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="hero">
-        <p className="hero__eyebrow">BankerBands.com</p>
-        <h1 className="hero__h1">Banker<br />Bands</h1>
-        <p className="hero__sub">The Forgotten Accessory of Order, Style, and Work</p>
-        <p className="hero__body">
-          Before cuffs were tailored and sleeves were exact, men used a simple band
-          to bring order to the shirt. Banker bands — also known as sleeve garters or
-          arm garters — kept sleeves clean, controlled, and out of the way. Once
-          practical, then iconic, now ready for a modern return.
-        </p>
-        <div className="hero__links">
-          <Link to="/what-are-banker-bands" className="hero__link">What are they</Link>
-          <Link to="/history"               className="hero__link">History</Link>
-          <Link to="/modern-uses"           className="hero__link">Modern uses</Link>
-          <Link to="/gallery"               className="hero__link">Gallery</Link>
+      {/* ── Split hero ── */}
+      <section className="hero-split">
+        <div className="hero-split__inner">
+
+          {/* Left: text */}
+          <div className="hero-split__text">
+            <p className="hero__eyebrow">BankerBands.com</p>
+            <h1 className="hero__h1">Banker<br />Bands</h1>
+            <p className="hero__sub">The Forgotten Accessory of Order, Style, and Work</p>
+            <p className="hero__body">
+              Before cuffs were tailored and sleeves were exact, men used a simple band
+              to bring order to the shirt. Banker bands — also known as sleeve garters or
+              arm garters — kept sleeves clean, controlled, and out of the way. Once
+              practical, then iconic, now ready for a modern return.
+            </p>
+            <div className="hero__links">
+              <Link to="/what-are-banker-bands" className="hero__link">What are they</Link>
+              <Link to="/history"               className="hero__link">History</Link>
+              <Link to="/modern-uses"           className="hero__link">Modern uses</Link>
+              <Link to="/gallery"               className="hero__link">Gallery</Link>
+            </div>
+          </div>
+
+          {/* Right: image */}
+          <div className="hero-split__image">
+            <img
+              src="/images/hero.png"
+              alt="A white dress shirt with a black elastic sleeve garter on the forearm"
+            />
+          </div>
+
         </div>
       </section>
-
-      {/* ── Hero image ── */}
-      <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', padding: '3rem 2rem 0' }}>
-        <div className="img-placeholder img-placeholder--wide">
-          Image — crisp white dress shirt with a black elastic sleeve garter, close-up
-        </div>
-      </div>
 
       {/* ── Nav cards ── */}
       <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', padding: '0 2rem' }}>
