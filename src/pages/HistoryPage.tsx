@@ -3,75 +3,75 @@ import { Link } from 'react-router-dom';
 
 const TIMELINE = [
   {
+    year: '1840s',
+    title: 'The Shirt Problem',
+    body: 'Mass-produced shirts in the mid-19th century were cut generously to fit a range of bodies. Sleeves were long by design — fabric was valuable and alterations were common. For working men, that extra length was a constant problem.',
+  },
+  {
     year: '1860s',
-    title: 'The Cash-Counting Problem',
-    body: 'As US banks grew after the Civil War, managing large volumes of paper currency became a serious operational challenge. Tellers counted notes by hand and used whatever wrapping was available — string, folded paper, rubber bands. There was no standard.',
+    title: 'The Working Solution',
+    body: 'Elastic had become commercially viable after Charles Goodyear vulcanised rubber in 1844. By the 1860s, braided elastic was being used in garments and accessories throughout the US and Britain. The sleeve garter was a natural application.',
+  },
+  {
+    year: '1880s',
+    title: 'Office Culture & the Counting Room',
+    body: 'As banking, insurance, and commerce expanded, the white-collar clerk became a fixture of city life. The sleeve garter was part of his uniform — practical, expected, and quietly signalling that he took his work seriously. The nickname "banker band" followed.',
+  },
+  {
+    year: '1890s',
+    title: 'The Card Table & the Bar',
+    body: 'Saloons, gambling halls, and riverboat casinos had their own version of the working professional. Bartenders and card dealers adopted the sleeve garter for identical reasons — control, cleanliness, and a certain visual authority at the table.',
   },
   {
     year: '1910s',
-    title: 'ABA Standardisation',
-    body: 'The American Bankers Association began formalising cash-handling procedures. Currency straps were introduced as a standard tool, with consistent dimensions and denomination labelling. Colour coding came later but the format was set.',
+    title: 'The Musician\'s Accessory',
+    body: 'Jazz and ragtime musicians, particularly those playing wind instruments, found sleeve garters useful for managing shirtsleeves during performance. The image of the musician in braces and sleeve garters became part of the visual identity of early American popular music.',
   },
   {
-    year: '1950s',
-    title: 'Mass Production',
-    body: 'Post-war economic expansion meant more banks, more branches, and more cash in circulation. Paper strapping was produced at scale, and the familiar ABA colour system became widely adopted across American financial institutions.',
-  },
-  {
-    year: '1970s',
-    title: 'Armoured Transport & The Brick',
-    body: 'As armoured cash transport grew, banded bills were bundled into standardised "bricks" of ten straps and "bundles" of ten bricks. The banker band became the foundational unit of an entire logistics system.',
-  },
-  {
-    year: '1990s',
-    title: 'Into Pop Culture',
-    body: 'Hip-hop\'s obsession with cash — and the visual grammar that came with it — put banker bands on screen. Stacks of banded bills appeared in music videos, films, and album artwork. The band crossed from function to symbol.',
-  },
-  {
-    year: '2000s',
-    title: 'The Fashion Crossover',
-    body: 'Streetwear and luxury fashion picked up the imagery. Designers referenced the stacked, banded bill as a motif. The banker band appeared on graphics, in shoots, and eventually as a literal accessory worn by collectors and enthusiasts.',
+    year: '1940s',
+    title: 'The Decline',
+    body: 'Improved manufacturing meant shirts could be cut to more precise standard sizes. Ready-to-wear clothing became affordable and better fitted. The practical need for sleeve garters diminished. They persisted in a few trades — bartending, card dealing — but gradually receded from everyday dress.',
   },
   {
     year: 'Today',
-    title: 'Functional & Cultural Object',
-    body: 'Banker bands remain in daily use in every cash-handling environment on earth. At the same time, they carry a second life as cultural shorthand — instantly legible, loaded with meaning, recognisable far outside the context of banking.',
+    title: 'Heritage & Revival',
+    body: 'The sleeve garter never disappeared entirely. In craft bartending, period costume, heritage menswear, and certain corners of music, it has remained a considered choice. A new generation is finding it again — not out of necessity, but because of what it represents.',
   },
 ];
 
 export default function HistoryPage() {
   useEffect(() => {
-    document.title = 'History of Banker Bands | BankerBands.com';
+    document.title = 'History of Sleeve Garters & Banker Bands | BankerBands.com';
     const meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (meta) meta.content = 'The history of banker bands — from post-Civil War cash handling to ABA standardisation, armoured transport, and pop culture crossover.';
+    if (meta) meta.content = 'The history of banker bands and sleeve garters — from 19th century counting rooms and card tables to craft bartending and heritage menswear today.';
   }, []);
 
   return (
     <div className="page">
       <div className="page-hero">
         <p className="page-hero__label">Origins & Evolution</p>
-        <h1 className="page-hero__h1">History of<br />Banker Bands</h1>
+        <h1 className="page-hero__h1">History of<br />the Banker Band</h1>
         <p className="page-hero__intro">
-          A short strip of paper with a surprisingly long story. The banker band
-          evolved from an improvised solution into a global standard — and then
-          into something no one in banking anticipated.
+          The sleeve garter is older than the suit as we know it. It belonged to the
+          clerk, the dealer, the bartender, and the musician long before it became
+          a style reference. This is how it got there.
         </p>
       </div>
 
       <div className="img-placeholder img-placeholder--wide" style={{ marginBottom: '4rem' }}>
-        Image — archival bank interior, early 20th century
+        Image — archival photograph, bank clerk at a desk, late 19th century
       </div>
 
       <div className="prose" style={{ maxWidth: '680px' }}>
         <p>
-          Currency straps were not invented so much as they emerged — a practical
-          answer to a practical problem. As the volume of paper money in circulation
-          grew through the late 19th and early 20th centuries, the need for a reliable,
-          standardised way to count and bundle notes became pressing.
+          The story of the sleeve garter is really the story of a mismatch — between
+          the shirt as it was made and the work as it had to be done. For most of the
+          19th century, that gap was bridged by a small elastic loop worn on the arm.
         </p>
         <p>
-          What started as an internal banking tool eventually left the vault entirely.
-          The journey took about a century.
+          It was never glamorous. It was never meant to be. But it accumulated meaning
+          over the decades it was in use, and that meaning outlasted the practical need
+          that created it.
         </p>
       </div>
 
@@ -90,35 +90,37 @@ export default function HistoryPage() {
       </div>
 
       <div className="pull-quote" style={{ marginTop: '4rem' }}>
-        <p>"It started as infrastructure. It became iconography."</p>
+        <p>"Every trade that required a clean forearm eventually found its way to the same solution."</p>
       </div>
 
       <div className="two-col" style={{ marginTop: '4rem' }}>
-        <div className="prose">
-          <h2>A Symbol of Certainty</h2>
-          <p>
-            The power of the banker band as a cultural object comes partly from what
-            it represents: verified count, real value, no ambiguity. In a world of
-            abstractions — digital transfers, credit lines, derivatives — a stack of
-            banded bills is disarmingly concrete.
-          </p>
-          <p>
-            That concreteness is why the image travels so well. It needs no explanation.
-            Everyone understands a banded stack of hundreds.
-          </p>
-        </div>
         <div>
           <div className="img-placeholder img-placeholder--square">
-            Image — banded bills in a film still
+            Image — jazz musician in sleeve garters, 1920s
           </div>
+        </div>
+        <div className="prose">
+          <h2>What the Image Carries</h2>
+          <p>
+            By the early 20th century, the sleeve garter had accumulated a clear
+            visual language: precision, professionalism, and a kind of focused
+            competence. The man wearing them was someone who worked with his hands
+            and his mind simultaneously — and who cared about both.
+          </p>
+          <p>
+            That association is why the image endures. It pulls together bartender,
+            banker, musician, and dealer into a single archetype — the skilled
+            professional at work, sleeves under control, entirely present to the task.
+          </p>
         </div>
       </div>
 
       <div className="prose" style={{ marginTop: '3rem' }}>
         <h2>Continue Reading</h2>
         <p>
-          See how banker bands are used today in <Link to="/modern-uses">modern contexts</Link>,
-          or explore what they actually are in <Link to="/what-are-banker-bands">What Are Banker Bands</Link>.
+          See where the banker band appears in{' '}
+          <Link to="/modern-uses">modern contexts</Link>, or go back to basics with{' '}
+          <Link to="/what-are-banker-bands">what they actually are</Link>.
         </p>
       </div>
     </div>

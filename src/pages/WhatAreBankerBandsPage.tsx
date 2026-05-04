@@ -3,119 +3,104 @@ import { Link } from 'react-router-dom';
 
 export default function WhatAreBankerBandsPage() {
   useEffect(() => {
-    document.title = 'What Are Banker Bands? | BankerBands.com';
+    document.title = 'What Are Banker Bands? Sleeve Garters Explained | BankerBands.com';
     const meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (meta) meta.content = 'Learn what banker bands are — paper currency straps used to bundle banknotes by denomination, used in banks, businesses, and beyond.';
+    if (meta) meta.content = 'Banker bands are sleeve garters — elastic bands worn around the upper forearm to hold shirt sleeves at the right length. Learn what they are and how they work.';
   }, []);
 
   return (
     <div className="page">
       <div className="page-hero">
-        <p className="page-hero__label">The basics</p>
+        <p className="page-hero__label">The Object</p>
         <h1 className="page-hero__h1">What Are<br />Banker Bands?</h1>
         <p className="page-hero__intro">
-          A banker band is a paper strap used to bundle a fixed number of banknotes
-          into a single unit. Simple, durable, and colour-coded — they are the quiet
-          infrastructure of the cash economy.
+          A banker band is a sleeve garter — an elastic band worn around the upper
+          forearm to hold a shirt sleeve at the correct working length. Simple in
+          construction, precise in purpose, and quietly elegant in appearance.
         </p>
       </div>
 
       <div className="two-col">
         <div className="prose">
-          <h2>The Definition</h2>
+          <h2>The Object</h2>
           <p>
-            A banker band — also called a currency strap or bill strap — is a thin strip
-            of paper, usually about 1.5 inches wide, wrapped around a stack of banknotes
-            and sealed. Each strap holds a fixed count of bills: typically 100 notes of
-            the same denomination.
+            Also called arm garters or sleeve garters, banker bands are small elastic
+            loops — typically an inch or two wide — worn on the forearm between the
+            elbow and the wrist. They grip the fabric of the shirt sleeve and hold it
+            in place at whatever height the wearer sets.
           </p>
           <p>
-            They are manufactured to strict specifications and printed with the
-            denomination and total value of the bundle. A strap of 100 one-dollar bills
-            is labelled $100. A strap of 100 hundred-dollar bills reads $10,000.
+            The result is a controlled sleeve that stays put regardless of movement.
+            No rolling, no slipping, no adjusting. For anyone working with ink, dough,
+            drink, cards, or a keyboard, that matters.
           </p>
 
           <h2>How They Work</h2>
           <p>
-            Bank tellers and cash handlers use strapping machines or hand-wrap bills
-            after counting. The band is applied, the ends are folded and sealed with
-            a tab or adhesive, and the bundle is set aside for storage or transport.
+            The band slides over the hand and up the arm. Once positioned, the elastic
+            grips the fabric and holds the sleeve at that point. The excess fabric
+            blouses slightly above the band, giving the shirt a slightly fuller look at
+            the upper arm — a silhouette that became associated with a certain kind of
+            careful, professional dress.
           </p>
           <p>
-            In high-volume settings — armoured cars, Federal Reserve branches,
-            casino cages — strapped bills are then bundled further into "bricks" of
-            ten straps, then into "bundles" of ten bricks. The humble band is the
-            first unit in a whole system of cash organisation.
+            Most banker bands fasten with a simple metal clip or buckle. Better
+            versions use a wider elastic with an adjustable clasp that allows for a
+            precise fit on any arm size.
           </p>
 
           <h2>Materials</h2>
           <p>
-            Most banker bands are made from 24 lb. bond paper — stiff enough to hold
-            its shape, thin enough to wrap tightly. Some higher-security variants
-            include serial numbers or tamper-evident adhesive. Plastic and rubber
-            alternatives exist but never replaced paper in professional cash handling.
+            Historically, sleeve garters were made from braided elastic with a simple
+            metal closure — brass or nickel-plated steel. The elastic was often striped
+            or patterned, providing a subtle visual detail against the white shirt.
+          </p>
+          <p>
+            Modern versions range from plain black elastic with a matte clip to
+            hand-sewn versions in ribbon, grosgrain, or woven fabric. A well-made pair
+            is a small, considered object — the kind of thing that rewards attention.
           </p>
         </div>
 
         <div>
           <div className="img-placeholder img-placeholder--tall" style={{ marginBottom: '1.5rem' }}>
-            Image — close-up of a paper currency strap
+            Image — arm garter on a white dress shirt, forearm detail
           </div>
           <div className="img-placeholder img-placeholder--square">
-            Image — denomination colour guide
+            Image — close-up of elastic band and metal clasp
           </div>
         </div>
+      </div>
+
+      <div className="pull-quote">
+        <p>"Not an ornament. A solution. The fact that it looks good is a byproduct of doing its job well."</p>
+      </div>
+
+      <div className="prose">
+        <h2>Who Wore Them</h2>
+        <p>
+          Before off-the-rack clothing was precise and affordable, a shirt was rarely
+          cut to fit the wearer exactly. Sleeves ran long. The sleeve garter was the
+          practical fix — a way to take a standard garment and make it work for the
+          task at hand.
+        </p>
+        <p>
+          Bankers and bookkeepers wore them to keep cuffs out of inkwells. Bartenders
+          wore them to keep sleeves dry and out of glasses. Card dealers wore them for
+          grip and control at the table. Telegraph operators, typographers, and
+          shopkeepers all had their reasons. The band was not an affectation — it was
+          equipment.
+        </p>
       </div>
 
       <hr className="section-divider" />
 
       <div className="prose">
-        <h2>Denomination Colour Coding</h2>
+        <h2>Continue Reading</h2>
         <p>
-          The American Bankers Association (ABA) standardised a colour system for
-          currency straps. Each denomination has its own colour, making it possible
-          to identify a bundle at a glance without counting.
-        </p>
-      </div>
-
-      <div style={{ overflowX: 'auto', margin: '2rem 0' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
-          <thead>
-            <tr style={{ borderBottom: '2px solid #000', textAlign: 'left' }}>
-              <th style={{ padding: '0.75rem 1rem 0.75rem 0', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '0.72rem' }}>Denomination</th>
-              <th style={{ padding: '0.75rem 1rem 0.75rem 0', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '0.72rem' }}>Strap Colour</th>
-              <th style={{ padding: '0.75rem 0', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '0.72rem' }}>Bundle Value (100 bills)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ['$1',   'Mustard / Yellow', '$100'],
-              ['$5',   'Red',              '$500'],
-              ['$10',  'Blue',             '$1,000'],
-              ['$20',  'Violet',           '$2,000'],
-              ['$50',  'Beige / Tan',      '$5,000'],
-              ['$100', 'Green',            '$10,000'],
-            ].map(([denom, colour, value]) => (
-              <tr key={denom} style={{ borderBottom: '1px solid #e0e0dd' }}>
-                <td style={{ padding: '0.75rem 1rem 0.75rem 0', color: '#444' }}>{denom}</td>
-                <td style={{ padding: '0.75rem 1rem 0.75rem 0', color: '#444' }}>{colour}</td>
-                <td style={{ padding: '0.75rem 0', color: '#444' }}>{value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div className="pull-quote">
-        <p>"The band is just paper — but it represents certainty. You trust the count."</p>
-      </div>
-
-      <div className="prose">
-        <h2>Related Reading</h2>
-        <p>
-          To understand how banker bands became more than a banking tool, read the{' '}
-          <Link to="/history">history of banker bands</Link> or see how they are used
-          today in <Link to="/modern-uses">modern contexts</Link>.
+          Read about the <Link to="/history">history of the sleeve garter</Link> —
+          how it rose, fell, and persists — or see where it shows up in{' '}
+          <Link to="/modern-uses">modern contexts</Link> today.
         </p>
       </div>
     </div>

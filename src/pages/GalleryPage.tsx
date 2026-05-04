@@ -2,25 +2,25 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const ITEMS = [
-  { caption: 'Standard ABA currency straps — full denomination set',            aspect: 'card' },
-  { caption: 'A strap of $100 bills — 100 notes, $10,000 total',               aspect: 'square' },
-  { caption: 'Strapping machine in a bank counting room',                        aspect: 'card' },
-  { caption: 'Banded bills stacked into a brick — 10 straps, $100,000',        aspect: 'square' },
-  { caption: 'Colour reference — mustard ($1) through green ($100)',            aspect: 'card' },
-  { caption: 'Prop bills from a film production — strapped and stacked',        aspect: 'square' },
-  { caption: 'Close-up — ABA denomination label detail',                        aspect: 'card' },
-  { caption: 'Retail cash drawer organised with currency straps',               aspect: 'square' },
-  { caption: 'Banker bands used for document organisation',                      aspect: 'card' },
-  { caption: 'Armoured transport pouches prepared with banded currency',        aspect: 'square' },
-  { caption: 'Hand-strapping technique — the teller fold',                      aspect: 'card' },
-  { caption: 'The $100 strap up close — green band, printed denomination',     aspect: 'square' },
+  { caption: 'Classic black elastic sleeve garter with metal clasp — product detail',  aspect: 'square' },
+  { caption: 'White dress shirt, forearm close-up — banker band in situ',              aspect: 'card' },
+  { caption: 'Archival photograph — bank clerk at a roll-top desk, c. 1895',           aspect: 'square' },
+  { caption: 'Card dealer at a felt table — sleeve garters, braces, white shirt',      aspect: 'card' },
+  { caption: 'Craft bartender — mid-pour, sleeve garters at the forearm',              aspect: 'square' },
+  { caption: 'Jazz musician with trumpet, 1920s — braided elastic sleeve garters',     aspect: 'card' },
+  { caption: 'Pair of striped elastic garters — flat lay on white linen',              aspect: 'square' },
+  { caption: 'Bookkeeper at ledger — counting room interior, late 19th century',       aspect: 'card' },
+  { caption: 'Modern product shot — matte black elastic, adjustable clasp',            aspect: 'square' },
+  { caption: 'Stage performance — folk musician, detail of shirt sleeve and garter',   aspect: 'card' },
+  { caption: 'Heritage menswear — full look with braces and sleeve garters',           aspect: 'square' },
+  { caption: 'The object alone — single sleeve garter on a white surface',             aspect: 'card' },
 ];
 
 export default function GalleryPage() {
   useEffect(() => {
-    document.title = 'Banker Bands Gallery | BankerBands.com';
+    document.title = 'Banker Bands Gallery — Sleeve Garters in Context | BankerBands.com';
     const meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (meta) meta.content = 'A visual reference for banker bands — denomination colours, counting rooms, bricks, props, and modern uses.';
+    if (meta) meta.content = 'A visual reference for banker bands and sleeve garters — archival photographs, product detail, bartenders, card dealers, musicians, and heritage menswear.';
   }, []);
 
   return (
@@ -29,8 +29,8 @@ export default function GalleryPage() {
         <p className="page-hero__label">Visual Reference</p>
         <h1 className="page-hero__h1">Gallery</h1>
         <p className="page-hero__intro">
-          Denomination colours, counting rooms, prop stacks, and everyday contexts.
-          A visual companion to the full story of the banker band.
+          Archival references, product detail, and the banker band in its natural
+          contexts — the bar, the table, the counting room, the stage.
         </p>
       </div>
 
@@ -50,9 +50,8 @@ export default function GalleryPage() {
       <div className="prose" style={{ textAlign: 'center', maxWidth: '520px', margin: '0 auto' }}>
         <h2>Learn More</h2>
         <p>
-          Images will be updated as the archive grows. In the meantime, explore{' '}
-          <Link to="/what-are-banker-bands">what banker bands are</Link>, their{' '}
-          <Link to="/history">history</Link>, and their{' '}
+          Explore <Link to="/what-are-banker-bands">what banker bands are</Link>,
+          their <Link to="/history">history</Link>, and their{' '}
           <Link to="/modern-uses">modern uses</Link>.
         </p>
       </div>

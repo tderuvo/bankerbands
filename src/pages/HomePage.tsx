@@ -5,28 +5,28 @@ const NAV_CARDS = [
   {
     label: '01',
     title: 'What Are Banker Bands?',
-    desc: 'The basics — what they are, how they work, and why they matter.',
+    desc: 'An elastic band, a shirt sleeve, and a simple problem solved with elegance.',
     href: '/what-are-banker-bands',
     cta: 'Read more',
   },
   {
     label: '02',
     title: 'History',
-    desc: 'From the Federal Reserve to pop culture — a surprisingly rich story.',
+    desc: 'From the counting room to the card table — a working accessory with a long story.',
     href: '/history',
     cta: 'Explore the history',
   },
   {
     label: '03',
     title: 'Modern Uses',
-    desc: 'Offices, studios, street style. Banker bands have travelled far.',
+    desc: 'Craft bartenders, musicians, heritage menswear. The band is back.',
     href: '/modern-uses',
     cta: 'See modern uses',
   },
   {
     label: '04',
     title: 'Gallery',
-    desc: 'A visual reference — colours, denominations, and real-world context.',
+    desc: 'Archival references, editorial photography, and the object up close.',
     href: '/gallery',
     cta: 'View gallery',
   },
@@ -34,9 +34,9 @@ const NAV_CARDS = [
 
 export default function HomePage() {
   useEffect(() => {
-    document.title = 'Banker Bands — From Currency Straps to Cultural Icon';
+    document.title = 'Banker Bands — The Forgotten Accessory of Order, Style, and Work';
     const meta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (meta) meta.content = 'Banker Bands — the humble currency strap that crossed over from bank vaults into everyday life, fashion, and culture.';
+    if (meta) meta.content = 'Banker Bands — sleeve garters worn by bankers, clerks, bartenders, and card dealers. A forgotten accessory with real heritage, ready for a modern return.';
   }, []);
 
   return (
@@ -45,12 +45,12 @@ export default function HomePage() {
       <section className="hero">
         <p className="hero__eyebrow">BankerBands.com</p>
         <h1 className="hero__h1">Banker<br />Bands</h1>
-        <p className="hero__sub">From Currency Straps to Cultural Icon</p>
+        <p className="hero__sub">The Forgotten Accessory of Order, Style, and Work</p>
         <p className="hero__body">
-          A banker band is a simple paper strap used to bundle currency.
-          It started in bank vaults and counting rooms, but somewhere along
-          the way it became something else — a shorthand for wealth, a prop in
-          music videos, a practical tool in everyday life. This site tells that story.
+          Before cuffs were tailored and sleeves were exact, men used a simple band
+          to bring order to the shirt. Banker bands — also known as sleeve garters or
+          arm garters — kept sleeves clean, controlled, and out of the way. Once
+          practical, then iconic, now ready for a modern return.
         </p>
         <div className="hero__links">
           <Link to="/what-are-banker-bands" className="hero__link">What are they</Link>
@@ -62,7 +62,9 @@ export default function HomePage() {
 
       {/* ── Hero image ── */}
       <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', padding: '3rem 2rem 0' }}>
-        <div className="img-placeholder img-placeholder--wide">Image — stacked bills with banker bands</div>
+        <div className="img-placeholder img-placeholder--wide">
+          Image — crisp white dress shirt with a black elastic sleeve garter, close-up
+        </div>
       </div>
 
       {/* ── Nav cards ── */}
