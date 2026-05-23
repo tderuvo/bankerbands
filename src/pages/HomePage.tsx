@@ -68,7 +68,12 @@ export default function HomePage() {
           <div className="hero-split__image">
             <img
               src="/images/hero.png"
-              alt="A white dress shirt with a black elastic sleeve garter on the forearm"
+              alt="Elegant gentleman wearing banker bands at a cosmopolitan restaurant"
+              width={1402}
+              height={1122}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 

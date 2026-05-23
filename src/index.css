@@ -245,13 +245,16 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #f2f2f0;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .hero-split__image img {
   width: 100%;
   max-width: 520px;
   height: auto;
-  border-radius: 3px;
   display: block;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
