@@ -367,33 +367,51 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
 }
 
 function CollectionAmericanaRevival() {
+  const [lightbox, setLightbox] = useState(false);
+
   return (
-    <article className="plan-collection-view">
-      <div className="plan-collection-view__hero">
-        <img
+    <>
+      <article className="plan-collection-view">
+        <div className="plan-collection-view__hero">
+          <img
+            src="/images/americana-revival.png"
+            alt="American Revival — Collection 2027"
+            className="plan-collection-view__hero-img"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width={1536}
+            height={1024}
+            onClick={() => setLightbox(true)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setLightbox(true); }}
+            aria-label="View American Revival full-screen"
+          />
+        </div>
+        <div className="plan-collection-view__body">
+          <p className="plan-collection-view__eyebrow">Collection 01</p>
+          <h2 className="plan-collection-view__title">American Revival</h2>
+          <p className="plan-collection-view__season">Collection 2027</p>
+          <div className="plan-collection-view__desc">
+            <p>American Revival began accidentally.</p>
+            <p>Claire's daughter wore the first desert-striped bands to a music festival outside Palm Springs. By the end of the weekend, strangers were stopping her to ask what they were.</p>
+            <p>The collection draws from rodeo nights, vintage Americana, sun-faded motel signs, desert highways, denim, leather, silver jewelry, and the strange glamour of the modern American West.</p>
+            <p>Somewhere between Coachella and old Marlboro postcards, the object became something younger, freer, and impossible to categorize.</p>
+            <p>Rooted in heritage.</p>
+            <p>Made for now.</p>
+          </div>
+        </div>
+      </article>
+
+      {lightbox && (
+        <Lightbox
           src="/images/americana-revival.png"
           alt="American Revival — Collection 2027"
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          width={1536}
-          height={1024}
+          onClose={() => setLightbox(false)}
         />
-      </div>
-      <div className="plan-collection-view__body">
-        <p className="plan-collection-view__eyebrow">Collection 01</p>
-        <h2 className="plan-collection-view__title">American Revival</h2>
-        <p className="plan-collection-view__season">Collection 2027</p>
-        <div className="plan-collection-view__desc">
-          <p>American Revival began accidentally.</p>
-          <p>Claire's daughter wore the first desert-striped bands to a music festival outside Palm Springs. By the end of the weekend, strangers were stopping her to ask what they were.</p>
-          <p>The collection draws from rodeo nights, vintage Americana, sun-faded motel signs, desert highways, denim, leather, silver jewelry, and the strange glamour of the modern American West.</p>
-          <p>Somewhere between Coachella and old Marlboro postcards, the object became something younger, freer, and impossible to categorize.</p>
-          <p>Rooted in heritage.</p>
-          <p>Made for now.</p>
-        </div>
-      </div>
-    </article>
+      )}
+    </>
   );
 }
 
@@ -414,6 +432,38 @@ function ChapterPlaceholder({ title }: { title: string }) {
     <div className="plan-placeholder">
       <p className="plan-placeholder__title">{title}</p>
       <p className="plan-placeholder__note">In development.</p>
+    </div>
+  );
+}
+
+/* ══ Lightbox ════════════════════════════════════════════════════════════════ */
+
+function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="plan-lightbox"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image preview"
+    >
+      <button className="plan-lightbox__close" onClick={onClose} aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      {/* stopPropagation prevents backdrop-click from closing when clicking the image itself */}
+      <div className="plan-lightbox__frame" onClick={(e) => e.stopPropagation()}>
+        <img src={src} alt={alt} className="plan-lightbox__img" />
+      </div>
     </div>
   );
 }

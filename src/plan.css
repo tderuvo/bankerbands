@@ -325,17 +325,25 @@
   min-height: calc(100vh - var(--p-chapter-h));
 }
 
-/* Full-view layout: large image + editorial body below */
+/* Full-view layout: constrained image + editorial body below */
 .plan-collection-view__hero {
-  width: 100%;
+  padding: 4rem 5rem 0;
+  max-width: 860px;
   line-height: 0;
 }
 
-.plan-collection-view__hero img {
+/* The image is intentionally narrower than full-panel — intimate, not banner */
+.plan-collection-view__hero-img {
   width: 100%;
-  max-height: 58vh;
-  object-fit: cover;
+  max-width: 580px;  /* matches narrative/portrait column */
+  height: auto;      /* natural aspect ratio — no cropping */
   display: block;
+  cursor: pointer;
+  transition: opacity 0.18s ease;
+}
+
+.plan-collection-view__hero-img:hover {
+  opacity: 0.85;
 }
 
 .plan-collection-view__body {
@@ -439,6 +447,66 @@
   color: var(--p-muted);
 }
 
+/* ══ Lightbox ════════════════════════════════════════════════════════════════ */
+
+.plan-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(18, 15, 13, 0.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: zoom-out;
+  /* fade in */
+  animation: plan-lightbox-in 0.2s ease;
+}
+
+@keyframes plan-lightbox-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.plan-lightbox__close {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(247, 245, 238, 0.55);
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 0.35rem 0.5rem;
+  transition: color 0.15s;
+  font-family: var(--p-sans);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.plan-lightbox__close:hover {
+  color: #f7f5ee;
+}
+
+/* stopPropagation wrapper — clicking image doesn't close the backdrop */
+.plan-lightbox__frame {
+  max-width: min(1200px, calc(100vw - 4rem));
+  max-height: calc(100vh - 4rem);
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-lightbox__img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 4rem);
+  object-fit: contain;
+  display: block;
+}
+
 /* ══ Mobile ══════════════════════════════════════════════════════════════════ */
 
 @media (max-width: 860px) {
@@ -529,6 +597,14 @@
   }
 
   /* Collection */
+  .plan-collection-view__hero {
+    padding: 2.5rem 2rem 0;
+  }
+
+  .plan-collection-view__hero-img {
+    max-width: 100%; /* fill available width on mobile */
+  }
+
   .plan-collection-view__body {
     padding: 3rem 2rem 5rem;
   }
