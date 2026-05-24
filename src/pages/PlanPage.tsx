@@ -10,13 +10,8 @@ import { useEffect, useState } from 'react';
 import '../plan.css';
 
 const SECTIONS = [
-  { id: 'narrative',   num: '—',  label: 'It all began'   },
-  { id: 'premise',     num: '01', label: 'The Premise'    },
-  { id: 'psychology',  num: '02', label: 'The Psychology' },
-  { id: 'collections', num: '03', label: 'The Collections'},
-  { id: 'symbol',      num: '04', label: 'The Symbol'     },
-  { id: 'strategy',    num: '05', label: 'The Strategy'   },
-  { id: 'longgame',    num: '06', label: 'The Long Game'  },
+  { id: 'narrative', num: '—', label: 'It all began'   },
+  { id: 'claire',    num: '—', label: 'Claire Marlowe' },
 ];
 
 export default function PlanPage() {
@@ -178,169 +173,59 @@ export default function PlanPage() {
             </div>
           </section>
 
-          {/* ── 01: The Premise ── */}
-          <section id="premise" className="plan-section" aria-labelledby="premise-title">
-            <p className="plan-section__label">01 — The Premise</p>
-            <h2 id="premise-title" className="plan-section__title">
-              A Working Object.
-            </h2>
-            <div className="plan-section__body">
-              <p>The banker band is, at its origin, a working object.</p>
-              <p>
-                It belonged to the people who took their work seriously enough to dress
-                for it — clerks managing the accounts, dealers controlling the cards,
-                bartenders moving through the crowd with mechanical precision. The sleeve
-                garter kept everything in place. Not metaphorically. Literally.
-              </p>
-              <p>
-                This is the object Maison BankerBands returns to circulation. Not as
-                nostalgia. Not as costume. As proposition.
-              </p>
-              <blockquote className="plan-pull">
-                What does composure feel like at the forearm? What does it look like
-                to arrive somewhere already settled in yourself?
-              </blockquote>
-              <p>
-                The banker band is a narrow piece of braided elastic and a metal clasp.
-                It is also, depending on who wears it, an entire argument about elegance.
-              </p>
-            </div>
-          </section>
+          {/* ── Claire Marlowe ── */}
+          <section id="claire" className="plan-section plan-narrative plan-section--last" aria-labelledby="claire-title">
+            <h2 id="claire-title" className="plan-claire__name">Claire Marlowe</h2>
+            <div className="plan-narrative__body">
 
-          {/* ── 02: The Psychology ── */}
-          <section id="psychology" className="plan-section" aria-labelledby="psychology-title">
-            <p className="plan-section__label">02 — The Psychology</p>
-            <h2 id="psychology-title" className="plan-section__title">
-              Objects Carry History.
-            </h2>
-            <div className="plan-section__body">
-              <p>This is not mysticism. It is how cognition works.</p>
-              <p>
-                When she wears something with a lineage of competence, that lineage
-                becomes part of her presence. Not through explanation. Not through
-                context. The object does not explain itself. That is precisely its
-                authority.
-              </p>
-              <p>
-                The banker band entered rooms that had rules. The counting room. The
-                casino. The bar. Environments of precision, of controlled pressure, of
-                knowing exactly what you were doing and wearing it on your body.
-              </p>
-              <blockquote className="plan-pull">
-                She wears it because she understands this.
-                And understanding it is the point.
-              </blockquote>
-              <p>The room senses this. They always do.</p>
-            </div>
-          </section>
+              <p>Claire Marlowe never intended to start a company.</p>
 
-          {/* ── 03: The Collections ── */}
-          <section id="collections" className="plan-section" aria-labelledby="collections-title">
-            <p className="plan-section__label">03 — The Collections</p>
-            <h2 id="collections-title" className="plan-section__title">
-              Three Arguments.
-            </h2>
-            <div className="plan-section__body">
-              <p>The inaugural collection is singular in purpose.</p>
-              <p>
-                One object. A narrow grosgrain sleeve garter, finished with a matte
-                gold clasp, worn at the forearm between the elbow and the wrist. Three
-                colorways. Each a different argument.
-              </p>
-              <p>
-                The ivory says: I have always been in rooms like this.<br />
-                The noir says: I know exactly how this ends.<br />
-                The burgundy says nothing. It simply arrives.
-              </p>
-              <p>
-                A second collection follows. Wider elastic, structural boning, worn at
-                the upper arm. For evenings that require a different kind of readiness.
-                For women who are never not dressed for the occasion.
-              </p>
-            </div>
-          </section>
+              <p>For most of her life, the object belonged only to her.</p>
 
-          {/* ── 04: The Symbol ── */}
-          <section id="symbol" className="plan-section" aria-labelledby="symbol-title">
-            <p className="plan-section__label">04 — The Symbol</p>
-            <h2 id="symbol-title" className="plan-section__title">
-              The Seal.
-            </h2>
-            <div className="plan-section__body">
-              <p>The circular badge mark.</p>
-              <p>It does not explain itself.</p>
-              <p>
-                This is the standard against which we hold everything. If it needs
-                explanation, it is not finished. If it requires context, it is not yet
-                confident enough. The mark, like the wearer, simply is.
-              </p>
-              <blockquote className="plan-pull">
-                Quiet authority. Not silence — presence.
-              </blockquote>
-              <p>
-                The badge appears on the object. On the tissue. On the inside of the
-                clasp where only she will see it.
-              </p>
-            </div>
-          </section>
+              <p>After Florence, she returned to California carrying far more than a single summer romance. Over the years she built a quiet life around beauty — interiors, travel, textiles, art direction, vintage tailoring, the kinds of details most people feel before they notice. Friends described her as impossibly observant. The sort of woman who could walk into a room and somehow remember the exact scent of the candles six months later.</p>
 
-          {/* ── 05: The Strategy ── */}
-          <section id="strategy" className="plan-section" aria-labelledby="strategy-title">
-            <p className="plan-section__label">05 — The Strategy</p>
-            <h2 id="strategy-title" className="plan-section__title">
-              A Disposition,<br />Not a Demographic.
-            </h2>
-            <div className="plan-section__body">
-              <p>Maison BankerBands is not a mass-market accessories brand.</p>
-              <p>
-                It is not heritage menswear repositioned for women. It is not feminist
-                statement jewelry. It is not luxury for the purpose of luxury.
-              </p>
-              <p>
-                It is a house built around a single psychological proposition: the
-                feeling of composed authority.
-              </p>
-              <p>
-                The market for this is not a demographic. It is a disposition. Women
-                who understand, instinctively, that how you dress for a room changes
-                how the room receives you. Who dress not to impress but to settle — to
-                communicate, without performance, that they are exactly where they
-                intended to be.
-              </p>
-              <blockquote className="plan-pull">
-                This market is underserved. Not because brands don't reach for it.
-                Because most brands don't understand what it feels like from the inside.
-              </blockquote>
-              <p>We do.</p>
-            </div>
-          </section>
+              <p>Fashion entered her life gradually, then all at once.</p>
 
-          {/* ── 06: The Long Game ── */}
-          <section id="longgame" className="plan-section plan-section--last" aria-labelledby="longgame-title">
-            <p className="plan-section__label">06 — The Long Game</p>
-            <h2 id="longgame-title" className="plan-section__title">
-              Object Permanence.
-            </h2>
-            <div className="plan-section__body">
-              <p>
-                Twenty years from now, there will be women who wear a BankerBand the
-                way their grandmothers wore pearl studs.
-              </p>
-              <p>
-                Not because a magazine told them to. Not because of a trend cycle or an
-                algorithm. Because the object found its place in their vocabulary — part
-                of the personal grammar through which they move through the world.
-              </p>
-              <p>That is the goal.</p>
-              <p>
-                Not seasons. Not campaigns. Not the exhausting machinery of
-                fashion-industry relevance.
-              </p>
-              <blockquote className="plan-pull">
-                Object permanence. The kind that outlasts everything — because it was
-                never trying to be current. It was always trying to be true.
-              </blockquote>
-              <p className="plan-section__closing">— Maison BankerBands, 2026</p>
+              <p>Not through runways or magazines, but through the accumulation of objects. Silk scarves found in Paris markets. Worn leather notebooks from Rome. Old cufflinks discovered in Palm Springs estate sales. Things touched by time. Things carrying residue.</p>
+
+              <p>The <em>ferma maniche</em> remained among them.</p>
+
+              <p>For years it lived quietly in drawers, wrapped in linen, moved from apartment to apartment as relationships, cities, and versions of herself changed around it. Sometimes she wore it beneath oversized white shirts while writing late at night. Sometimes she forgot it existed for months at a time before rediscovering it unexpectedly and feeling, all over again, the strange emotional suspension of that Florentine summer.</p>
+
+              <p>Marco had eventually confessed the truth during the final weeks of their affair.</p>
+
+              <p>The art professor was not simply an art professor.</p>
+
+              <p>His family belonged to one of the old banking dynasties stretching back generations through northern Italy — private banking, old money, old rules, the kind of wealth that does not need to introduce itself. He spoke about it reluctantly, almost apologetically, as though it belonged to another version of him entirely.</p>
+
+              <p>When she asked again what <em>ferma maniche</em> meant in English, he laughed and searched for the words.</p>
+
+              <p>"Banker bands," he finally said in broken English.</p>
+
+              <p>"Because my family… always bankers. Always these things."</p>
+
+              <p>The phrase stayed with her almost as long as the object itself.</p>
+
+              <p>Years later, while searching for a birthday gift for one of her closest friends, Claire found herself thinking less about jewelry and more about gestures. About the objects people quietly keep long after they stop being fashionable. About mixtapes in shoeboxes. Hotel matchbooks. Scarves borrowed and never returned.</p>
+
+              <p>Without fully planning to, she sat at her dining table one evening and made one herself.</p>
+
+              <p>A narrow band in soft cream and faded black elastic, stitched by hand and paired with a short handwritten note thanking her friend for remaining such an important part of her life through the years. Nothing dramatic. Nothing overly sentimental. Just something personal enough that it could never have come from a department store.</p>
+
+              <p>Her friend cried when she opened it.</p>
+
+              <p>Not because of the object itself, Claire thinks now.</p>
+
+              <p>Because people are starved for thoughtful things.</p>
+
+              <p>A few months later, her daughter borrowed one before a music festival. Then another friend asked for one. Then another. Soon Claire found herself designing versions she never could have imagined back in Florence — desert-toned woven elastics for Coachella, delicate satin versions for evenings out, striped Americana variations, darker noir editions worn beneath vintage leather jackets.</p>
+
+              <p>The girls looked beautiful in them.</p>
+
+              <p>Not styled. Not branded. Just… unmistakably themselves.</p>
+
+              <p>That was the moment Claire realized the object had survived long enough to become something else.</p>
+
             </div>
           </section>
 

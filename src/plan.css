@@ -162,6 +162,18 @@
   font-style: italic;
 }
 
+/* ── Claire Marlowe name heading ────────────────────────────────────────── */
+.plan-claire__name {
+  font-family: var(--p-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--p-ink);
+  margin-bottom: 4.5rem;
+}
+
 /* ── Sections ───────────────────────────────────────────────────────────── */
 .plan-section {
   padding: 5rem 5rem 5rem 5rem;
@@ -181,54 +193,6 @@
   text-transform: uppercase;
   color: var(--p-muted);
   margin-bottom: 1.5rem;
-}
-
-.plan-section__title {
-  font-family: var(--p-serif);
-  font-size: clamp(2rem, 3.75vw, 3.5rem);
-  font-weight: normal;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  margin-bottom: 2.75rem;
-  color: var(--p-ink);
-}
-
-.plan-section__body {
-  max-width: 520px;
-}
-
-.plan-section__body p {
-  font-size: 0.97rem;
-  line-height: 1.88;
-  color: #46423d;
-}
-
-.plan-section__body p + p {
-  margin-top: 1.15rem;
-}
-
-/* ── Pull quote ─────────────────────────────────────────────────────────── */
-.plan-pull {
-  font-family: var(--p-serif);
-  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
-  font-style: italic;
-  line-height: 1.55;
-  color: var(--p-ink);
-  margin: 2.75rem 0;
-  padding-left: 1.75rem;
-  border-left: 1.5px solid var(--p-ink);
-  quotes: none;
-  max-width: 480px;
-}
-
-/* ── Closing signature ──────────────────────────────────────────────────── */
-.plan-section__closing {
-  margin-top: 3.5rem;
-  font-family: var(--p-serif);
-  font-style: italic;
-  font-size: 0.88rem;
-  color: var(--p-muted);
-  letter-spacing: 0.04em;
 }
 
 /* ── Mobile ─────────────────────────────────────────────────────────────── */
