@@ -357,7 +357,7 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
     <div className="plan-collection-chapter">
       {activeSection === 'americana-revival' && <CollectionAmericanaRevival />}
       {activeSection === 'balletcore'        && <CollectionBalletcore />}
-      {activeSection === 'tokyo-atelier'     && <CollectionComingSoon name="Tokyo Atelier"   num="03" />}
+      {activeSection === 'tokyo-atelier'     && <CollectionTokyoAtelier />}
       {activeSection === 'quiet-luxury'      && <CollectionComingSoon name="Quiet Luxury"    num="04" />}
       {activeSection === 'streetwear-luxe'   && <CollectionComingSoon name="Streetwear Luxe" num="05" />}
       {activeSection === 'euro-summer'       && <CollectionComingSoon name="Euro Summer"     num="06" />}
@@ -449,6 +449,27 @@ function CollectionBalletcore() {
       <p>The collection was not designed to feel precious. It was designed to feel held.</p>
       <p>A band for white cotton dresses, morning light, rehearsal rooms, soft sweaters, bare shoulders, and evenings when the smallest detail changes everything.</p>
       <p>Where American Revival runs toward the sun, Balletcore stays near the window.</p>
+    </CollectionView>
+  );
+}
+
+/* ── Collection 03: Tokyo Atelier ── */
+function CollectionTokyoAtelier() {
+  return (
+    <CollectionView
+      imageSrc="/images/tokyo-atelier.png"
+      imageAlt="Tokyo Atelier — Collection 2027"
+      eyebrow="Collection 03"
+      title="Tokyo Atelier"
+      season="Collection 2027"
+    >
+      <p>Tokyo Atelier emerged from precision.</p>
+      <p>Claire first noticed it while traveling through Tokyo with her daughter — the way the city treated detail almost reverently. School uniforms tailored perfectly. Tiny objects designed with impossible care. Soft fabrics layered against sharp silhouettes. Everything restrained. Everything intentional.</p>
+      <p>The collection draws from late-night Shibuya streets, atelier minimalism, manga romanticism, vintage school uniforms, quiet luxury, and the strange emotional architecture of modern Tokyo.</p>
+      <p>The bands became slimmer here. Cleaner. More deliberate. Black satin stripes, silver hardware, pale ivory elastics worn beneath oversized sweaters, leather jackets, and perfectly imperfect tailoring.</p>
+      <p>Nothing loud.</p>
+      <p>Nothing accidental.</p>
+      <p>A collection built around the beauty of subtle signals.</p>
     </CollectionView>
   );
 }
