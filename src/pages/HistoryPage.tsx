@@ -104,8 +104,16 @@ export default function HistoryPage() {
 
       <div className="two-col" style={{ marginTop: '4rem' }}>
         <div>
-          <div className="img-placeholder img-placeholder--square">
-            Image — jazz musician in sleeve garters, 1920s
+          <div className="archival-image">
+            <img
+              src="/images/jazz.png"
+              alt="1920s jazz musician wearing sleeve garters during a live performance"
+              width={1536}
+              height={1024}
+              loading="lazy"
+              decoding="async"
+            />
+            <p className="archival-image__caption">Jazz musician, circa 1920s</p>
           </div>
         </div>
         <div className="prose">
