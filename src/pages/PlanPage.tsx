@@ -360,7 +360,7 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
       {activeSection === 'tokyo-atelier'     && <CollectionTokyoAtelier />}
       {activeSection === 'quiet-luxury'      && <CollectionQuietLuxury />}
       {activeSection === 'streetwear-luxe'   && <CollectionStreetwearLuxe />}
-      {activeSection === 'euro-summer'       && <CollectionComingSoon name="Euro Summer"     num="06" />}
+      {activeSection === 'euro-summer'       && <CollectionEuroSummer />}
       {activeSection === 'dark-academia'     && <CollectionComingSoon name="Dark Academia"   num="07" />}
     </div>
   );
@@ -510,6 +510,26 @@ function CollectionStreetwearLuxe() {
       <p>The collection draws from downtown Los Angeles, Tokyo side streets, late-night convenience stores, mirrored elevators, rooftop parties, chrome jewelry, flash photography, and the strange elegance of modern city nights.</p>
       <p>Gloss black elastics. Reflective striping. Monochrome palettes interrupted by moments of silver, blush, cobalt, and deep wine tones.</p>
       <p>A collection built around contrast:<br />softness against structure,<br />luxury against street,<br />intimacy against performance.</p>
+    </CollectionView>
+  );
+}
+
+/* ── Collection 06: Euro Summer ── */
+function CollectionEuroSummer() {
+  return (
+    <CollectionView
+      imageSrc="/images/euro-summer.png"
+      imageAlt="Euro Summer — Collection 2027"
+      eyebrow="Collection 06"
+      title="Euro Summer"
+      season="Collection 2027"
+    >
+      <p>Euro Summer arrived sun-soaked.</p>
+      <p>Claire began noticing the bands appearing in vacation photographs before she saw them anywhere else — wrapped around bare forearms beside linen shirts, oversized sunglasses, saltwater hair, and half-finished glasses of wine somewhere along the Mediterranean coast.</p>
+      <p>The collection draws from Amalfi mornings, Ibiza nights, Greek islands, striped umbrellas, sea-worn stone, vintage postcards, open balconies, silk scarves moving in warm wind, and the particular glamour that only seems to exist near water.</p>
+      <p>The bands softened here.</p>
+      <p>Lighter fabrics. Sun-faded tones. Creams, pale blues, washed terracotta, muted gold hardware, and delicate woven patterns designed to feel effortless against sun-touched skin.</p>
+      <p>A collection built for long lunches, late ferries, summer romances, and the version of yourself that only appears while traveling.</p>
     </CollectionView>
   );
 }
