@@ -179,6 +179,34 @@ img { display: block; max-width: 100%; }
   .editorial-image { padding: 1.5rem; }
 }
 
+/* ── Archival image block (History page) ── */
+.archival-image {
+  background-color: var(--off-white);
+  border: 1px solid var(--gray-300);
+  border-radius: 3px;
+  padding: 2rem 2rem 1.5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.archival-image img {
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.archival-image__caption {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  color: var(--gray-500);
+  letter-spacing: 0.1em;
+  font-family: var(--serif);
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  .archival-image { padding: 1.25rem 1.25rem 1rem; }
+}
+
 /* ── Page hero (inner pages) ── */
 .page-hero {
   padding: 4rem 0 3rem;

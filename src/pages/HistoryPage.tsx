@@ -58,8 +58,17 @@ export default function HistoryPage() {
         </p>
       </div>
 
-      <div className="img-placeholder img-placeholder--wide" style={{ marginBottom: '4rem' }}>
-        Image — archival photograph, bank clerk at a desk, late 19th century
+      <div className="archival-image">
+        <img
+          src="/images/archival.png"
+          alt="Archival photograph of a late 19th century bank clerk wearing sleeve garters at a desk"
+          width={1536}
+          height={1024}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
+        <p className="archival-image__caption">Bank clerk, late 19th century</p>
       </div>
 
       <div className="prose" style={{ maxWidth: '680px' }}>
