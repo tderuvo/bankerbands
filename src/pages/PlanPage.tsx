@@ -359,7 +359,7 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
       {activeSection === 'balletcore'        && <CollectionBalletcore />}
       {activeSection === 'tokyo-atelier'     && <CollectionTokyoAtelier />}
       {activeSection === 'quiet-luxury'      && <CollectionQuietLuxury />}
-      {activeSection === 'streetwear-luxe'   && <CollectionComingSoon name="Streetwear Luxe" num="05" />}
+      {activeSection === 'streetwear-luxe'   && <CollectionStreetwearLuxe />}
       {activeSection === 'euro-summer'       && <CollectionComingSoon name="Euro Summer"     num="06" />}
       {activeSection === 'dark-academia'     && <CollectionComingSoon name="Dark Academia"   num="07" />}
     </div>
@@ -490,6 +490,26 @@ function CollectionQuietLuxury() {
       <p>The collection draws from old hotels along the Amalfi Coast, Palm Springs mornings, understated tailoring, inherited watches, silk against sun-warmed skin, and the quiet confidence of women who understand that elegance rarely announces itself.</p>
       <p>Cream elastics. Matte gold clasps. Soft ivory tones designed to disappear beneath the cuff while somehow changing the entire silhouette.</p>
       <p>The kind of object noticed only by people paying attention.</p>
+    </CollectionView>
+  );
+}
+
+/* ── Collection 05: Streetwear Luxe ── */
+function CollectionStreetwearLuxe() {
+  return (
+    <CollectionView
+      imageSrc="/images/streetwear-luxe.png"
+      imageAlt="Streetwear Luxe — Collection 2027"
+      eyebrow="Collection 05"
+      title="Streetwear Luxe"
+      season="Collection 2027"
+    >
+      <p>Streetwear Luxe began when the bands stopped behaving politely.</p>
+      <p>Claire noticed younger women styling them against oversized hoodies, vintage sneakers, layered jewelry, cropped tanks, leather bombers, and low-rise denim. The contrast changed everything.</p>
+      <p>What once belonged to old-world tailoring suddenly felt urban, playful, and slightly rebellious.</p>
+      <p>The collection draws from downtown Los Angeles, Tokyo side streets, late-night convenience stores, mirrored elevators, rooftop parties, chrome jewelry, flash photography, and the strange elegance of modern city nights.</p>
+      <p>Gloss black elastics. Reflective striping. Monochrome palettes interrupted by moments of silver, blush, cobalt, and deep wine tones.</p>
+      <p>A collection built around contrast:<br />softness against structure,<br />luxury against street,<br />intimacy against performance.</p>
     </CollectionView>
   );
 }
