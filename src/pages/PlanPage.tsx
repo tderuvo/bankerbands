@@ -356,7 +356,7 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
   return (
     <div className="plan-collection-chapter">
       {activeSection === 'americana-revival' && <CollectionAmericanaRevival />}
-      {activeSection === 'balletcore'        && <CollectionComingSoon name="Balletcore"      num="02" />}
+      {activeSection === 'balletcore'        && <CollectionBalletcore />}
       {activeSection === 'tokyo-atelier'     && <CollectionComingSoon name="Tokyo Atelier"   num="03" />}
       {activeSection === 'quiet-luxury'      && <CollectionComingSoon name="Quiet Luxury"    num="04" />}
       {activeSection === 'streetwear-luxe'   && <CollectionComingSoon name="Streetwear Luxe" num="05" />}
@@ -366,7 +366,17 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
   );
 }
 
-function CollectionAmericanaRevival() {
+/* ── Reusable collection layout (image + body + lightbox) ── */
+type CollectionViewProps = {
+  imageSrc: string;
+  imageAlt: string;
+  eyebrow: string;
+  title: string;
+  season: string;
+  children: React.ReactNode;
+};
+
+function CollectionView({ imageSrc, imageAlt, eyebrow, title, season, children }: CollectionViewProps) {
   const [lightbox, setLightbox] = useState(false);
 
   return (
@@ -374,8 +384,8 @@ function CollectionAmericanaRevival() {
       <article className="plan-collection-view">
         <div className="plan-collection-view__hero">
           <img
-            src="/images/americana-revival.png"
-            alt="American Revival — Collection 2027"
+            src={imageSrc}
+            alt={imageAlt}
             className="plan-collection-view__hero-img"
             loading="eager"
             fetchPriority="high"
@@ -386,32 +396,60 @@ function CollectionAmericanaRevival() {
             role="button"
             tabIndex={0}
             onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setLightbox(true); }}
-            aria-label="View American Revival full-screen"
+            aria-label={`View ${title} full-screen`}
           />
         </div>
         <div className="plan-collection-view__body">
-          <p className="plan-collection-view__eyebrow">Collection 01</p>
-          <h2 className="plan-collection-view__title">American Revival</h2>
-          <p className="plan-collection-view__season">Collection 2027</p>
-          <div className="plan-collection-view__desc">
-            <p>American Revival began accidentally.</p>
-            <p>Claire's daughter wore the first desert-striped bands to a music festival outside Palm Springs. By the end of the weekend, strangers were stopping her to ask what they were.</p>
-            <p>The collection draws from rodeo nights, vintage Americana, sun-faded motel signs, desert highways, denim, leather, silver jewelry, and the strange glamour of the modern American West.</p>
-            <p>Somewhere between Coachella and old Marlboro postcards, the object became something younger, freer, and impossible to categorize.</p>
-            <p>Rooted in heritage.</p>
-            <p>Made for now.</p>
-          </div>
+          <p className="plan-collection-view__eyebrow">{eyebrow}</p>
+          <h2 className="plan-collection-view__title">{title}</h2>
+          <p className="plan-collection-view__season">{season}</p>
+          <div className="plan-collection-view__desc">{children}</div>
         </div>
       </article>
 
       {lightbox && (
-        <Lightbox
-          src="/images/americana-revival.png"
-          alt="American Revival — Collection 2027"
-          onClose={() => setLightbox(false)}
-        />
+        <Lightbox src={imageSrc} alt={imageAlt} onClose={() => setLightbox(false)} />
       )}
     </>
+  );
+}
+
+/* ── Collection 01: American Revival ── */
+function CollectionAmericanaRevival() {
+  return (
+    <CollectionView
+      imageSrc="/images/americana-revival.png"
+      imageAlt="American Revival — Collection 2027"
+      eyebrow="Collection 01"
+      title="American Revival"
+      season="Collection 2027"
+    >
+      <p>American Revival began accidentally.</p>
+      <p>Claire's daughter wore the first desert-striped bands to a music festival outside Palm Springs. By the end of the weekend, strangers were stopping her to ask what they were.</p>
+      <p>The collection draws from rodeo nights, vintage Americana, sun-faded motel signs, desert highways, denim, leather, silver jewelry, and the strange glamour of the modern American West.</p>
+      <p>Somewhere between Coachella and old Marlboro postcards, the object became something younger, freer, and impossible to categorize.</p>
+      <p>Rooted in heritage.</p>
+      <p>Made for now.</p>
+    </CollectionView>
+  );
+}
+
+/* ── Collection 02: Balletcore ── */
+function CollectionBalletcore() {
+  return (
+    <CollectionView
+      imageSrc="/images/balletcore.png"
+      imageAlt="Balletcore — Collection 2027"
+      eyebrow="Collection 02"
+      title="Balletcore"
+      season="Collection 2027"
+    >
+      <p>Balletcore came from softness.</p>
+      <p>After the desert bands, Claire began sketching something quieter — satin elastics, blush tones, pale ribbons, delicate clasps, and the kind of details that feel almost private against the skin.</p>
+      <p>The collection was not designed to feel precious. It was designed to feel held.</p>
+      <p>A band for white cotton dresses, morning light, rehearsal rooms, soft sweaters, bare shoulders, and evenings when the smallest detail changes everything.</p>
+      <p>Where American Revival runs toward the sun, Balletcore stays near the window.</p>
+    </CollectionView>
   );
 }
 
