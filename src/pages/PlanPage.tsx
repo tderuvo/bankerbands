@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import '../plan.css';
 
 const SECTIONS = [
+  { id: 'narrative',   num: '—',  label: 'It all began'   },
   { id: 'premise',     num: '01', label: 'The Premise'    },
   { id: 'psychology',  num: '02', label: 'The Psychology' },
   { id: 'collections', num: '03', label: 'The Collections'},
@@ -19,7 +20,7 @@ const SECTIONS = [
 ];
 
 export default function PlanPage() {
-  const [activeId, setActiveId] = useState('premise');
+  const [activeId, setActiveId] = useState('narrative');
 
   /* ── Meta: noindex + title ── */
   useEffect(() => {
@@ -105,28 +106,77 @@ export default function PlanPage() {
             />
           </div>
 
-          {/* ── Introduction ── */}
-          <div className="plan-intro">
-            <p className="plan-intro__eyebrow">Maison BankerBands</p>
-            <h1 className="plan-intro__headline">
-              The Room<br />Adjusts.
-            </h1>
-            <div className="plan-intro__body">
-              <p>There is a kind of woman who does not announce herself.</p>
-              <p>She does not need to. The room adjusts.</p>
-              <p>
-                She enters — the card room at midnight, the atelier at nine, the
-                boardroom on a Tuesday — and the people around her feel, without quite
-                knowing why, that they are in the presence of someone who has always
-                been here. Who belongs here. Who could not be more at home.
-              </p>
-              <p>
-                This is not power as performance. It is power as posture. As instinct.
-                As the particular composure of someone who knows a room before she enters it.
-              </p>
-              <p>Maison BankerBands was built for her.</p>
+          {/* ── Narrative: It all began ── */}
+          <section id="narrative" className="plan-section plan-narrative" scroll-margin-top="2.5rem">
+            <p className="plan-section__label">It all began</p>
+            <div className="plan-narrative__body">
+
+              <p>When I was twenty-two, I spent a summer in Florence pretending to study sculpture.</p>
+
+              <p>That was the agreement, at least. My parents would pay for the apartment and the classes if I promised it would "look good later." I remember nodding earnestly over the phone from California, though the truth was that I wanted very little to do with résumés or future planning. I wanted distance. Beauty. Heat. Something I couldn't yet name.</p>
+
+              <p>Florence in July feels less like a city than a fever dream someone forgot to wake you from. The stone glows at night. Espresso tastes darker there. Even the silence feels inhabited.</p>
+
+              <p>He taught mornings in a studio not far from Santo Spirito. Sculpture, drawing, anatomy. He was older than me by enough years to make my friends back home raise their eyebrows when I described him later — though I rarely did. Some experiences resist translation.</p>
+
+              <p>What I remember most now is not his face, exactly.</p>
+
+              <p>It was the way he moved through rooms.</p>
+
+              <p>Even covered in marble dust, he remained impossibly composed. White shirts with the sleeves carefully folded. Soft leather shoes. A watch he wore loose at the wrist. And always — always — the bands at his forearms.</p>
+
+              <p>At first I thought they were some kind of tailoring eccentricity. An old-world affectation. I had never seen anything like them in America. One morning while he worked clay between his hands, I finally asked him what they were called.</p>
+
+              <p>"<em>Ferma maniche</em>," he said.</p>
+
+              <p>I repeated it badly. He laughed softly and corrected my pronunciation by touching two fingers lightly against my arm.</p>
+
+              <p>I became obsessed with them after that.</p>
+
+              <p>The different fabrics. The stripes. The tiny clasps. The intimacy of the object itself. They sat so close to the skin they almost disappeared, yet somehow changed the entire silhouette of a person wearing them. They made him look disciplined and relaxed at the same time. European in the way Americans secretly romanticize.</p>
+
+              <p>One morning near the end of the summer, I stayed behind in his apartment while he left early for the studio. Florence was unbearably hot already. The shutters were half open and somewhere below, someone was arguing beautifully in Italian.</p>
+
+              <p>His shirt was hanging over the back of a chair.</p>
+
+              <p>I remember making espresso barefoot in his kitchen wearing nothing except the oversized white shirt I had stolen from the floor beside the bed. And there, still wrapped around the sleeve, was the pair I loved most — dark elastic with a narrow cream stripe and a worn brass clasp polished smooth by years of use.</p>
+
+              <p>I slipped them onto my own arms almost absentmindedly.</p>
+
+              <p>Then I stood in front of the mirror for a very long time.</p>
+
+              <p>It sounds ridiculous now, trying to explain it. It wasn't about wanting to look masculine. It wasn't costume. It was something quieter than that. For the first time in my life, I understood how an object could alter the way a person felt inside themselves.</p>
+
+              <p>Not transform. Reveal.</p>
+
+              <p>Years later, I would still remember that morning with impossible clarity. The espresso cooling beside the sink. The church bells somewhere in the distance. The smell of clay dust and his cologne in the linen.</p>
+
+              <p>On my last day in Florence, he left before I woke.</p>
+
+              <p>At first I felt wounded by it. Then I saw the envelope on the table beside my suitcase.</p>
+
+              <p>Inside was a note written in his uneven English. He said that seeing me off properly would make the goodbye smaller somehow. Too ordinary. Better, he wrote, to leave things exactly as they were — suspended at their most beautiful point.</p>
+
+              <p>Folded inside the letter was the pair of ferma maniche.</p>
+
+              <p>My pair now, though neither of us said that directly.</p>
+
+              <p>At the bottom of the note, almost as an afterthought, he had written:</p>
+
+              <p>"Keep this gift band."</p>
+
+              <p>Then underneath, in Italian:</p>
+
+              <p><em>Non ferma maniche.<br />Ferma tempo.</em></p>
+
+              <p>Not sleeve stopper.<br />Time stopper.</p>
+
+              <p>I can still imagine him smiling while he wrote it, apologizing to himself for his terrible English.</p>
+
+              <p>The band still smells faintly of his cologne when the weather turns warm enough.</p>
+
             </div>
-          </div>
+          </section>
 
           {/* ── 01: The Premise ── */}
           <section id="premise" className="plan-section" aria-labelledby="premise-title">

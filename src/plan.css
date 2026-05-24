@@ -135,43 +135,31 @@
   display: block;
 }
 
-/* ── Introduction ───────────────────────────────────────────────────────── */
-.plan-intro {
-  padding: 5.5rem 5rem 5rem 5rem;
-  border-bottom: 1px solid var(--p-rule);
-  max-width: 860px;
+/* ── Narrative section (It all began...) ───────────────────────────────── */
+/* Typography tuned for long-form memoir reading — generous, unhurried.    */
+
+.plan-narrative .plan-section__label {
+  margin-bottom: 4.5rem; /* more air before the prose opens */
 }
 
-.plan-intro__eyebrow {
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--p-muted);
-  margin-bottom: 2.25rem;
+.plan-narrative__body {
+  max-width: 580px; /* ~65-70 chars per line at this size */
 }
 
-.plan-intro__headline {
+.plan-narrative__body p {
   font-family: var(--p-serif);
-  font-size: clamp(3rem, 5.5vw, 5.5rem);
-  font-weight: normal;
-  line-height: 1.0;
-  letter-spacing: -0.025em;
-  margin-bottom: 3rem;
-  color: var(--p-ink);
+  font-size: 1.06rem;
+  line-height: 2.0;
+  color: #3e3a35;
 }
 
-.plan-intro__body {
-  max-width: 500px;
+.plan-narrative__body p + p {
+  margin-top: 1.75em; /* generous paragraph breathing */
 }
 
-.plan-intro__body p {
-  font-size: 1rem;
-  line-height: 1.88;
-  color: #46423d;
-}
-
-.plan-intro__body p + p {
-  margin-top: 1.1rem;
+/* "Not transform. Reveal." — emotional pivot, naturally weighted by brevity */
+.plan-narrative__body p em {
+  font-style: italic;
 }
 
 /* ── Sections ───────────────────────────────────────────────────────────── */
@@ -249,18 +237,9 @@
     display: none; /* TOC collapses on mobile — content reads linearly */
   }
 
-  .plan-intro,
   .plan-section {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .plan-intro {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-  }
-
-  .plan-section {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
@@ -271,13 +250,8 @@
 }
 
 @media (max-width: 480px) {
-  .plan-intro,
   .plan-section {
     padding-left: 1.35rem;
     padding-right: 1.35rem;
-  }
-
-  .plan-intro__headline {
-    font-size: 2.5rem;
   }
 }
