@@ -8,11 +8,11 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="site-header__inner">
           <Link to="/" className="site-header__logo" aria-label="Banker Bands — home">
             <img
-              src="/images/logo_wordmark.png"
+              src="/images/logo_badge.png"
               alt="Banker Bands"
               className="site-header__logo-img"
-              height={36}
-              width={54}
+              width={48}
+              height={48}
               loading="eager"
               fetchPriority="high"
               decoding="sync"
@@ -31,11 +31,11 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       <footer className="site-footer">
         <img
-          src="/images/logo_badge.png"
-          alt=""
-          className="site-footer__badge"
-          width={44}
-          height={44}
+          src="/images/logo_wordmark.png"
+          alt="Banker Bands"
+          className="site-footer__wordmark"
+          width={1536}
+          height={1024}
           loading="lazy"
           decoding="async"
         />

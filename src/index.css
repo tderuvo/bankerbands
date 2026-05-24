@@ -67,9 +67,13 @@ img { display: block; max-width: 100%; }
   line-height: 0; /* prevent descender gap */
 }
 .site-header__logo-img {
-  height: 36px;
+  height: 48px;
   width: auto;
   display: block;
+  transition: opacity 0.18s ease;
+}
+.site-header__logo:hover .site-header__logo-img {
+  opacity: 0.72;
 }
 .site-header__nav {
   display: flex;
@@ -93,18 +97,19 @@ img { display: block; max-width: 100%; }
 /* ── Footer ── */
 .site-footer {
   border-top: 1px solid var(--gray-300);
-  padding: 2.5rem 2rem 2rem;
+  padding: 3.5rem 2rem 2.5rem;
   text-align: center;
   font-size: 0.78rem;
   color: var(--gray-500);
   letter-spacing: 0.05em;
 }
-.site-footer__badge {
-  width: 44px;
-  height: 44px;
+.site-footer__wordmark {
+  width: 210px;
+  max-width: 72%;
+  height: auto;
   display: block;
-  margin: 0 auto 1.25rem;
-  opacity: 0.45;
+  margin: 0 auto 1.75rem;
+  opacity: 0.82;
 }
 
 /* ── Page wrapper ── */
