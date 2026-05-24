@@ -6,7 +6,18 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="site">
       <header className="site-header">
         <div className="site-header__inner">
-          <Link to="/" className="site-header__logo">Banker Bands</Link>
+          <Link to="/" className="site-header__logo" aria-label="Banker Bands — home">
+            <img
+              src="/images/logo_wordmark.png"
+              alt="Banker Bands"
+              className="site-header__logo-img"
+              height={36}
+              width={54}
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
+            />
+          </Link>
           <nav className="site-header__nav" aria-label="Main navigation">
             <NavLink to="/what-are-banker-bands" className={({ isActive }) => isActive ? 'nav-link nav-link--active' : 'nav-link'}>What Are They</NavLink>
             <NavLink to="/history"               className={({ isActive }) => isActive ? 'nav-link nav-link--active' : 'nav-link'}>History</NavLink>
@@ -19,6 +30,15 @@ export default function Layout({ children }: { children: ReactNode }) {
       <main className="site-main">{children}</main>
 
       <footer className="site-footer">
+        <img
+          src="/images/logo_badge.png"
+          alt=""
+          className="site-footer__badge"
+          width={44}
+          height={44}
+          loading="lazy"
+          decoding="async"
+        />
         © {new Date().getFullYear()} BankerBands.com · All rights reserved
       </footer>
     </div>
