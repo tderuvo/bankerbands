@@ -1,0 +1,283 @@
+/* ── plan.css — Maison BankerBands internal document ─────────────────────
+   Completely isolated from index.css.
+   All rules scoped inside .plan-root to prevent any bleed into the public site.
+   ───────────────────────────────────────────────────────────────────────── */
+
+.plan-root *,
+.plan-root *::before,
+.plan-root *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.plan-root {
+  /* Local design tokens — mirrors the site's warm paper palette */
+  --p-paper:   #f7f5ee;
+  --p-ink:     #1c1917;
+  --p-muted:   #8a8680;
+  --p-rule:    #c6c2b6;
+  --p-serif:   Georgia, 'Times New Roman', serif;
+  --p-sans:    -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --p-panel-w: 220px;
+
+  min-height: 100vh;
+  background: var(--p-paper);
+  color: var(--p-ink);
+  font-family: var(--p-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Two-column frame ───────────────────────────────────────────────────── */
+.plan-layout {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* ── Left panel: sticky TOC ─────────────────────────────────────────────── */
+.plan-nav {
+  width: var(--p-panel-w);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--p-rule);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-nav__eyebrow {
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  margin-bottom: 0.65rem;
+}
+
+.plan-nav__title {
+  font-family: var(--p-serif);
+  font-size: 0.98rem;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--p-ink);
+}
+
+.plan-nav__toc {
+  list-style: none;
+  margin-top: 3rem;
+  flex: 1;
+}
+
+.plan-nav__link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  padding: 0.6rem 0;
+  text-decoration: none;
+  transition: color 0.15s;
+  line-height: 1.4;
+}
+
+.plan-nav__link:hover,
+.plan-nav__link--active {
+  color: var(--p-ink);
+}
+
+.plan-nav__num {
+  font-size: 0.52rem;
+  letter-spacing: 0.06em;
+  color: var(--p-muted);
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  transition: color 0.15s;
+  padding-top: 0.1em;
+}
+
+.plan-nav__link--active .plan-nav__num {
+  color: var(--p-ink);
+}
+
+.plan-nav__foot {
+  padding-top: 2rem;
+  border-top: 1px solid var(--p-rule);
+  font-size: 0.56rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  line-height: 2.2;
+}
+
+/* ── Right panel: content ───────────────────────────────────────────────── */
+.plan-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+.plan-hero {
+  width: 100%;
+  line-height: 0; /* collapse any descender gap */
+}
+
+.plan-hero__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Introduction ───────────────────────────────────────────────────────── */
+.plan-intro {
+  padding: 5.5rem 5rem 5rem 5rem;
+  border-bottom: 1px solid var(--p-rule);
+  max-width: 860px;
+}
+
+.plan-intro__eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  margin-bottom: 2.25rem;
+}
+
+.plan-intro__headline {
+  font-family: var(--p-serif);
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
+  font-weight: normal;
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+  margin-bottom: 3rem;
+  color: var(--p-ink);
+}
+
+.plan-intro__body {
+  max-width: 500px;
+}
+
+.plan-intro__body p {
+  font-size: 1rem;
+  line-height: 1.88;
+  color: #46423d;
+}
+
+.plan-intro__body p + p {
+  margin-top: 1.1rem;
+}
+
+/* ── Sections ───────────────────────────────────────────────────────────── */
+.plan-section {
+  padding: 5rem 5rem 5rem 5rem;
+  border-bottom: 1px solid var(--p-rule);
+  max-width: 860px;
+  scroll-margin-top: 2.5rem;
+}
+
+.plan-section--last {
+  border-bottom: none;
+  padding-bottom: 9rem;
+}
+
+.plan-section__label {
+  font-size: 0.58rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  margin-bottom: 1.5rem;
+}
+
+.plan-section__title {
+  font-family: var(--p-serif);
+  font-size: clamp(2rem, 3.75vw, 3.5rem);
+  font-weight: normal;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 2.75rem;
+  color: var(--p-ink);
+}
+
+.plan-section__body {
+  max-width: 520px;
+}
+
+.plan-section__body p {
+  font-size: 0.97rem;
+  line-height: 1.88;
+  color: #46423d;
+}
+
+.plan-section__body p + p {
+  margin-top: 1.15rem;
+}
+
+/* ── Pull quote ─────────────────────────────────────────────────────────── */
+.plan-pull {
+  font-family: var(--p-serif);
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--p-ink);
+  margin: 2.75rem 0;
+  padding-left: 1.75rem;
+  border-left: 1.5px solid var(--p-ink);
+  quotes: none;
+  max-width: 480px;
+}
+
+/* ── Closing signature ──────────────────────────────────────────────────── */
+.plan-section__closing {
+  margin-top: 3.5rem;
+  font-family: var(--p-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--p-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .plan-nav {
+    display: none; /* TOC collapses on mobile — content reads linearly */
+  }
+
+  .plan-intro,
+  .plan-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .plan-intro {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .plan-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .plan-section--last {
+    padding-bottom: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-intro,
+  .plan-section {
+    padding-left: 1.35rem;
+    padding-right: 1.35rem;
+  }
+
+  .plan-intro__headline {
+    font-size: 2.5rem;
+  }
+}

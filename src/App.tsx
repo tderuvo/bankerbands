@@ -5,20 +5,29 @@ import WhatAreBankerBandsPage from './pages/WhatAreBankerBandsPage';
 import HistoryPage from './pages/HistoryPage';
 import ModernUsesPage from './pages/ModernUsesPage';
 import GalleryPage from './pages/GalleryPage';
+import PlanPage from './pages/PlanPage';
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/"                        element={<HomePage />} />
-          <Route path="/what-are-banker-bands"   element={<WhatAreBankerBandsPage />} />
-          <Route path="/history"                 element={<HistoryPage />} />
-          <Route path="/modern-uses"             element={<ModernUsesPage />} />
-          <Route path="/gallery"                 element={<GalleryPage />} />
-          <Route path="*"                        element={<NotFound />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        {/* ── Hidden internal page — own isolated layout, no site nav/footer ── */}
+        <Route path="/plan" element={<PlanPage />} />
+
+        {/* ── Public site — all routes share the site Layout ── */}
+        <Route path="*" element={
+          <Layout>
+            <Routes>
+              <Route path="/"                      element={<HomePage />} />
+              <Route path="/what-are-banker-bands"  element={<WhatAreBankerBandsPage />} />
+              <Route path="/history"                element={<HistoryPage />} />
+              <Route path="/modern-uses"            element={<ModernUsesPage />} />
+              <Route path="/gallery"                element={<GalleryPage />} />
+              <Route path="*"                       element={<NotFound />} />
+            </Routes>
+          </Layout>
+        } />
+      </Routes>
     </BrowserRouter>
   );
 }
