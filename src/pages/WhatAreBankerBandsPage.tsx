@@ -63,8 +63,16 @@ export default function WhatAreBankerBandsPage() {
         </div>
 
         <div>
-          <div className="img-placeholder img-placeholder--tall" style={{ marginBottom: '1.5rem' }}>
-            Image — arm garter on a white dress shirt, forearm detail
+          <div className="editorial-image">
+            <img
+              src="/images/the_object.png"
+              alt="A black elastic sleeve garter — the banker band object"
+              width={1536}
+              height={1024}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
           <div className="img-placeholder img-placeholder--square">
             Image — close-up of elastic band and metal clasp

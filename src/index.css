@@ -162,6 +162,23 @@ img { display: block; max-width: 100%; }
 .img-placeholder--tall   { aspect-ratio: 3 / 4; }
 .img-placeholder--card   { aspect-ratio: 4 / 3; }
 
+/* ── Editorial image block (e.g. the_object.png) ── */
+.editorial-image {
+  background-color: var(--gray-100);
+  border-radius: 4px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+.editorial-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+  .editorial-image { padding: 1.5rem; }
+}
+
 /* ── Page hero (inner pages) ── */
 .page-hero {
   padding: 4rem 0 3rem;
