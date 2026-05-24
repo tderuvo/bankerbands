@@ -361,7 +361,7 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
       {activeSection === 'quiet-luxury'      && <CollectionQuietLuxury />}
       {activeSection === 'streetwear-luxe'   && <CollectionStreetwearLuxe />}
       {activeSection === 'euro-summer'       && <CollectionEuroSummer />}
-      {activeSection === 'dark-academia'     && <CollectionComingSoon name="Dark Academia"   num="07" />}
+      {activeSection === 'dark-academia'     && <CollectionDarkAcademia />}
     </div>
   );
 }
@@ -534,13 +534,23 @@ function CollectionEuroSummer() {
   );
 }
 
-function CollectionComingSoon({ name, num }: { name: string; num: string }) {
+/* ── Collection 07: Dark Academia ── */
+function CollectionDarkAcademia() {
   return (
-    <div className="plan-collection-soon">
-      <p className="plan-collection-soon__num">Collection {num}</p>
-      <p className="plan-collection-soon__name">{name}</p>
-      <p className="plan-collection-soon__note">In development.</p>
-    </div>
+    <CollectionView
+      imageSrc="/images/dark-academia.png"
+      imageAlt="Dark Academia — Collection 2027"
+      eyebrow="Collection 07"
+      title="Dark Academia"
+      season="Collection 2027"
+    >
+      <p>Dark Academia felt inevitable.</p>
+      <p>The object had always belonged near paper, ink, ledgers, libraries, late nights, and rooms where people disappeared into thought. Claire did not design this collection so much as uncover it.</p>
+      <p>It draws from old university corridors, candlelit desks, wool coats, black coffee, annotated books, vintage typewriters, rain against tall windows, and the private glamour of women who know more than they say.</p>
+      <p>The bands became deeper here.</p>
+      <p>Espresso brown. Ink black. Oxblood. Aged brass. Narrow stripes that feel inherited rather than new.</p>
+      <p>A collection for cardigans, trench coats, sharp collars, untied ribbons, quiet obsessions, and the kind of intelligence that never needs to raise its voice.</p>
+    </CollectionView>
   );
 }
 

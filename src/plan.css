@@ -390,35 +390,6 @@
   margin-top: 1rem;
 }
 
-/* Coming-soon state for future collections */
-.plan-collection-soon {
-  padding: 6rem 5rem;
-}
-
-.plan-collection-soon__num {
-  font-size: 0.54rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--p-muted);
-  margin-bottom: 1.25rem;
-}
-
-.plan-collection-soon__name {
-  font-family: var(--p-serif);
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: normal;
-  font-style: italic;
-  color: var(--p-ink);
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-}
-
-.plan-collection-soon__note {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--p-muted);
-}
 
 /* ══ Placeholder chapters ════════════════════════════════════════════════════ */
 
@@ -609,10 +580,6 @@
     padding: 3rem 2rem 5rem;
   }
 
-  .plan-collection-soon {
-    padding: 4rem 2rem;
-  }
-
   /* Placeholder */
   .plan-placeholder {
     padding: 4rem 2rem;
@@ -631,7 +598,6 @@
   }
 
   .plan-collection-view__body,
-  .plan-collection-soon,
   .plan-placeholder {
     padding-left: 1.35rem;
     padding-right: 1.35rem;
