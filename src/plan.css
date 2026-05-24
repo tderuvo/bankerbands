@@ -220,6 +220,132 @@
   margin-bottom: 1.5rem;
 }
 
+/* ── Collections archive ─────────────────────────────────────────────────── */
+/* The track breaks the section's right-edge constraint so cards can bleed   */
+/* rightward — left alignment stays anchored to the 5rem section padding.    */
+.plan-collections {
+  max-width: none;
+  padding-right: 0;
+}
+
+.plan-collections__track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin-top: 3rem;
+  padding-bottom: 6rem;
+  padding-right: 5rem;   /* breathing room after last card */
+  cursor: grab;
+  user-select: none;
+}
+
+.plan-collections__track:active {
+  cursor: grabbing;
+}
+
+.plan-collections__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Collection card ─────────────────────────────────────────────────────── */
+.plan-collection-card {
+  flex-shrink: 0;
+  width: calc(100% - 5rem);  /* leave 5rem gap → next card peeks into frame */
+  max-width: 820px;
+  height: 540px;
+  scroll-snap-align: start;
+  display: flex;
+  border: 1px solid var(--p-rule);
+  overflow: hidden;
+  background: var(--p-paper);
+}
+
+/* ── Left info panel ─────────────────────────────────────────────────────── */
+.plan-collection-card__meta {
+  width: 260px;
+  flex-shrink: 0;
+  padding: 3rem 2.5rem;
+  border-right: 1px solid var(--p-rule);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.plan-collection-card__eyebrow {
+  font-size: 0.52rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  margin-bottom: 0.65rem;
+}
+
+.plan-collection-card__title {
+  font-family: var(--p-serif);
+  font-size: 1.7rem;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.1;
+  color: var(--p-ink);
+  margin-bottom: 0.65rem;
+}
+
+.plan-collection-card__season {
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--p-rule);
+}
+
+/* Description: clips overflow, fades bottom edge — invites discovery */
+.plan-collection-card__desc {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-collection-card__desc::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  background: linear-gradient(to bottom, transparent, var(--p-paper));
+  pointer-events: none;
+}
+
+.plan-collection-card__desc p {
+  font-family: var(--p-serif);
+  font-size: 0.8rem;
+  line-height: 1.85;
+  color: #5a5550;
+}
+
+.plan-collection-card__desc p + p {
+  margin-top: 0.8rem;
+}
+
+/* ── Right image panel ───────────────────────────────────────────────────── */
+.plan-collection-card__visual {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.plan-collection-card__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* ── Mobile ─────────────────────────────────────────────────────────────── */
 @media (max-width: 860px) {
   .plan-nav {
@@ -240,6 +366,48 @@
   .plan-section--last {
     padding-bottom: 6rem;
   }
+
+  /* Collections: zero out section side padding — track handles its own */
+  .plan-collections {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .plan-collections__track {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Stack card vertically on mobile — image below meta */
+  .plan-collection-card {
+    width: calc(100% - 2.5rem); /* peek next card */
+    height: auto;
+    flex-direction: column;
+    max-width: none;
+  }
+
+  .plan-collection-card__meta {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--p-rule);
+    padding: 2.5rem 2rem;
+    overflow: visible;
+  }
+
+  .plan-collection-card__desc {
+    overflow: visible;
+  }
+
+  .plan-collection-card__desc::after {
+    display: none;
+  }
+
+  .plan-collection-card__visual {
+    height: 280px;
+    flex: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -250,5 +418,14 @@
   .plan-section {
     padding-left: 1.35rem;
     padding-right: 1.35rem;
+  }
+
+  .plan-collections__track {
+    padding-left: 1.35rem;
+    padding-right: 1.35rem;
+  }
+
+  .plan-collection-card {
+    width: calc(100% - 2rem);
   }
 }

@@ -10,8 +10,9 @@ import { useEffect, useState } from 'react';
 import '../plan.css';
 
 const SECTIONS = [
-  { id: 'narrative', num: '—', label: 'It all began'   },
-  { id: 'claire',    num: '—', label: 'Claire Marlowe' },
+  { id: 'narrative',   num: '—', label: 'It all began'    },
+  { id: 'claire',      num: '—', label: 'Claire Marlowe'  },
+  { id: 'collections', num: '—', label: 'The Collections' },
 ];
 
 export default function PlanPage() {
@@ -174,7 +175,7 @@ export default function PlanPage() {
           </section>
 
           {/* ── Claire Marlowe ── */}
-          <section id="claire" className="plan-section plan-narrative plan-section--last" aria-labelledby="claire-title">
+          <section id="claire" className="plan-section plan-narrative" aria-labelledby="claire-title">
             <h2 id="claire-title" className="plan-claire__name">Claire Marlowe</h2>
             <div className="plan-narrative__body">
 
@@ -239,6 +240,46 @@ export default function PlanPage() {
               <p>Not styled. Not branded. Just… unmistakably themselves.</p>
 
               <p>That was the moment Claire realized the object had survived long enough to become something else.</p>
+
+            </div>
+          </section>
+
+          {/* ── The Collections ── */}
+          <section id="collections" className="plan-section plan-collections plan-section--last" aria-labelledby="collections-title">
+            <p className="plan-section__label">The Collections</p>
+
+            <div className="plan-collections__track" role="region" aria-label="Collection archive">
+
+              {/* ── Collection 01: American Revival ── */}
+              <article className="plan-collection-card">
+                <div className="plan-collection-card__meta">
+                  <div className="plan-collection-card__header">
+                    <p className="plan-collection-card__eyebrow">Collection 01</p>
+                    <h3 id="collections-title" className="plan-collection-card__title">
+                      American<br />Revival
+                    </h3>
+                    <p className="plan-collection-card__season">Collection 2027</p>
+                  </div>
+                  <div className="plan-collection-card__desc">
+                    <p>American Revival began accidentally.</p>
+                    <p>Claire's daughter wore the first desert-striped bands to a music festival outside Palm Springs. By the end of the weekend, strangers were stopping her to ask what they were.</p>
+                    <p>The collection draws from rodeo nights, vintage Americana, sun-faded motel signs, desert highways, denim, leather, silver jewelry, and the strange glamour of the modern American West.</p>
+                    <p>Somewhere between Coachella and old Marlboro postcards, the object became something younger, freer, and impossible to categorize.</p>
+                    <p>Rooted in heritage.</p>
+                    <p>Made for now.</p>
+                  </div>
+                </div>
+                <figure className="plan-collection-card__visual">
+                  <img
+                    src="/images/americana-revival.png"
+                    alt="American Revival — Collection 2027"
+                    loading="lazy"
+                    decoding="async"
+                    width={1536}
+                    height={1024}
+                  />
+                </figure>
+              </article>
 
             </div>
           </section>
