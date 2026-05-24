@@ -124,13 +124,16 @@
 }
 
 /* ── Hero ───────────────────────────────────────────────────────────────── */
+/* Constrained to the reading column — intimate, not banner-like.           */
 .plan-hero {
-  width: 100%;
-  line-height: 0; /* collapse any descender gap */
+  padding: 5rem 5rem 0;
+  max-width: 860px; /* matches section max-width */
+  line-height: 0;
 }
 
 .plan-hero__img {
   width: 100%;
+  max-width: 580px; /* matches narrative/portrait column */
   height: auto;
   display: block;
 }
@@ -223,6 +226,10 @@
     display: none; /* TOC collapses on mobile — content reads linearly */
   }
 
+  .plan-hero {
+    padding: 3.5rem 2rem 0;
+  }
+
   .plan-section {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -236,6 +243,10 @@
 }
 
 @media (max-width: 480px) {
+  .plan-hero {
+    padding: 3rem 1.35rem 0;
+  }
+
   .plan-section {
     padding-left: 1.35rem;
     padding-right: 1.35rem;
