@@ -36,6 +36,7 @@ const CHAPTER_SECTIONS: Record<ChapterId, Section[]> = {
     { id: 'streetwear-luxe',   label: 'Streetwear Luxe',  num: '05' },
     { id: 'euro-summer',       label: 'Euro Summer',      num: '06' },
     { id: 'dark-academia',     label: 'Dark Academia',    num: '07' },
+    { id: 'americano-men',     label: 'Americano Men',    num: '08' },
   ],
   branding:     [],
   financials:   [],
@@ -362,6 +363,7 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
       {activeSection === 'streetwear-luxe'   && <CollectionStreetwearLuxe />}
       {activeSection === 'euro-summer'       && <CollectionEuroSummer />}
       {activeSection === 'dark-academia'     && <CollectionDarkAcademia />}
+      {activeSection === 'americano-men'     && <CollectionAmericanoMen />}
     </div>
   );
 }
@@ -550,6 +552,28 @@ function CollectionDarkAcademia() {
       <p>The bands became deeper here.</p>
       <p>Espresso brown. Ink black. Oxblood. Aged brass. Narrow stripes that feel inherited rather than new.</p>
       <p>A collection for cardigans, trench coats, sharp collars, untied ribbons, quiet obsessions, and the kind of intelligence that never needs to raise its voice.</p>
+    </CollectionView>
+  );
+}
+
+/* ── Collection 08: Americano Men ── */
+function CollectionAmericanoMen() {
+  return (
+    <CollectionView
+      imageSrc="/images/americano-mens.png"
+      imageAlt="Americano Men — Collection 2027"
+      eyebrow="Collection 08"
+      title="Americano Men"
+      season="Collection 2027"
+    >
+      <p>Americano Men returned the object to where it began.</p>
+      <p>Not nostalgia.<br />Not costume.</p>
+      <p>A modern reinterpretation of American masculine style — part yachting club, part roadside motel, part downtown hotel bar at midnight.</p>
+      <p>The collection draws from sun-faded varsity jackets, old polo photographs, tailored white shirts, silver watches, vintage convertibles, desert highways, leather weekend bags, rolled sleeves, and the quiet confidence of men who never needed to announce themselves loudly.</p>
+      <p>The bands became more structural here.</p>
+      <p>Matte black elastics. Navy striping. Tobacco leather accents. Brushed steel hardware worn soft with time.</p>
+      <p>A collection designed to disappear beneath the cuff while subtly changing the posture of the man wearing it.</p>
+      <p>Not performative masculinity.<br />Something calmer.</p>
     </CollectionView>
   );
 }
