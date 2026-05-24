@@ -358,7 +358,7 @@ function ChapterCollection({ activeSection }: { activeSection: string }) {
       {activeSection === 'americana-revival' && <CollectionAmericanaRevival />}
       {activeSection === 'balletcore'        && <CollectionBalletcore />}
       {activeSection === 'tokyo-atelier'     && <CollectionTokyoAtelier />}
-      {activeSection === 'quiet-luxury'      && <CollectionComingSoon name="Quiet Luxury"    num="04" />}
+      {activeSection === 'quiet-luxury'      && <CollectionQuietLuxury />}
       {activeSection === 'streetwear-luxe'   && <CollectionComingSoon name="Streetwear Luxe" num="05" />}
       {activeSection === 'euro-summer'       && <CollectionComingSoon name="Euro Summer"     num="06" />}
       {activeSection === 'dark-academia'     && <CollectionComingSoon name="Dark Academia"   num="07" />}
@@ -470,6 +470,26 @@ function CollectionTokyoAtelier() {
       <p>Nothing loud.</p>
       <p>Nothing accidental.</p>
       <p>A collection built around the beauty of subtle signals.</p>
+    </CollectionView>
+  );
+}
+
+/* ── Collection 04: Quiet Luxury ── */
+function CollectionQuietLuxury() {
+  return (
+    <CollectionView
+      imageSrc="/images/quiet-luxury.png"
+      imageAlt="Quiet Luxury — Collection 2027"
+      eyebrow="Collection 04"
+      title="Quiet Luxury"
+      season="Collection 2027"
+    >
+      <p>Quiet Luxury was never about wealth.</p>
+      <p>It was about ease.</p>
+      <p>Claire noticed it first in women who no longer dressed to prove anything — linen trousers worn perfectly imperfect, gold jewelry softened by time, cashmere left carelessly over a chair, white shirts half-buttoned after long dinners that stretched into midnight conversations.</p>
+      <p>The collection draws from old hotels along the Amalfi Coast, Palm Springs mornings, understated tailoring, inherited watches, silk against sun-warmed skin, and the quiet confidence of women who understand that elegance rarely announces itself.</p>
+      <p>Cream elastics. Matte gold clasps. Soft ivory tones designed to disappear beneath the cuff while somehow changing the entire silhouette.</p>
+      <p>The kind of object noticed only by people paying attention.</p>
     </CollectionView>
   );
 }
