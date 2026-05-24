@@ -74,8 +74,15 @@ export default function WhatAreBankerBandsPage() {
               decoding="async"
             />
           </div>
-          <div className="img-placeholder img-placeholder--square">
-            Image — close-up of elastic band and metal clasp
+          <div className="editorial-image">
+            <img
+              src="/images/how_it_works.png"
+              alt="Diagram showing how a banker band sleeve garter positions on the forearm"
+              width={1536}
+              height={1024}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </div>
