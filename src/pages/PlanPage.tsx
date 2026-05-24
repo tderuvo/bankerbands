@@ -182,6 +182,20 @@ export default function PlanPage() {
 
               <p>For most of her life, the object belonged only to her.</p>
 
+              {/* ── Portrait ── */}
+              <figure className="plan-portrait">
+                <img
+                  src="/images/claire-marlowe.png"
+                  alt="Claire Marlowe, Southern California"
+                  className="plan-portrait__img"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption className="plan-portrait__caption">
+                  Claire Marlowe, photographed in Southern California, 2026.
+                </figcaption>
+              </figure>
+
               <p>After Florence, she returned to California carrying far more than a single summer romance. Over the years she built a quiet life around beauty — interiors, travel, textiles, art direction, vintage tailoring, the kinds of details most people feel before they notice. Friends described her as impossibly observant. The sort of woman who could walk into a room and somehow remember the exact scent of the candles six months later.</p>
 
               <p>Fashion entered her life gradually, then all at once.</p>

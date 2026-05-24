@@ -174,6 +174,28 @@
   margin-bottom: 4.5rem;
 }
 
+/* ── Claire Marlowe portrait ─────────────────────────────────────────────── */
+.plan-portrait {
+  margin: 3.5rem 0 4rem;
+  width: 100%;
+}
+
+.plan-portrait__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.plan-portrait__caption {
+  margin-top: 1rem;
+  font-family: var(--p-serif);
+  font-style: italic;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  color: var(--p-muted);
+  line-height: 1.6;
+}
+
 /* ── Sections ───────────────────────────────────────────────────────────── */
 .plan-section {
   padding: 5rem 5rem 5rem 5rem;
